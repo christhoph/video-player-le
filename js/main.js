@@ -43,33 +43,29 @@ const onVideoTimeUpdate = () => {
   $progress.value = $video.currentTime;
 };
 
-const onPlay = (e) => {
-  e.stopPropagation();
+const onPlay = () => {
   $video.play();
   onToggleOverlay();
   onToggleHidden();
 };
 
-const onPause = (e) => {
-  e.stopPropagation();
+const onPause = () => {
   $video.pause();
   onToggleOverlay();
   onToggleHidden(true);
 };
 
-const onRewind = (e) => {
+const onRewind = () => {
   $video.currentTime = 0;
-  onPause(e);
+  onPause();
   $video.load();
 };
 
-const onBackward = (e) => {
-  e.stopPropagation();
+const onBackward = () => {
   onUploadVideoTime(true);
 };
 
-const onForward = (e) => {
-  e.stopPropagation();
+const onForward = () => {
   onUploadVideoTime();
 };
 

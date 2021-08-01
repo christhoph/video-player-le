@@ -98,6 +98,7 @@ body {
 .player-progress input {
   block-size: 4px;
   flex: 1;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 992px) {

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Video Player | Leonidas Esteban</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://leonidasesteban.com/icons/icon-96x96.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="player">
+          <video
+            id="video"
+            src="./assets/videos/lofi.mp4"
+            poster="./assets/images/poster.jpg"
+          ></video>
+          <div class="player-overlay show">
+            <h2 class="player-title">Música para programar</h2>
+            <div class="player-actions">
+              <button
+                hidden
+                id="backward"
+                class="button"
+                title="Backward 10 seconds"
+                aria-label="Backward 10 seconds"
+              ></button>
+              <button
+                id="play"
+                class="button"
+                title="Play video"
+                aria-label="Play video"
+              ></button>
+              <button
+                hidden
+                id="pause"
+                class="button"
+                title="Pause video"
+                aria-label="Pause video"
+              ></button>
+              <button
+                hidden
+                id="forward"
+                class="button"
+                title="Forward 10 seconds"
+              ></button>
+            </div>
+            <div class="player-progress">
+              <div class="player-mute">
+                <button
+                  hidden
+                  id="mute"
+                  class="button"
+                  title="Mute video"
+                  aria-label="Mute video"
+                ></button>
+                <button
+                  hidden
+                  id="unmute"
+                  class="button"
+                  title="Unmute video"
+                  aria-label="Unmute video"
+                ></button>
+              </div>
+              <input
+                hidden
+                min="0"
+                step="1"
+                value="0"
+                type="range"
+                id="progress"
+                name="progress"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
